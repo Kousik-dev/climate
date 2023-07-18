@@ -65,6 +65,7 @@ body {
     width: 50px;
     height: 50px;
     cursor: pointer;
+    max-width: 60px; /* Add this to limit the button width on mobile */
 }
 
 .weatherIcon {
@@ -98,15 +99,18 @@ body {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-    .card {
-        padding: 30px;
+    /* ... Your other media query rules ... */
+
+    .search {
+        flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
     }
 
-    .weatherIcon {
-        width: 80px;
+    .search input {
+        flex: 1 0 100%; /* Make the input take up the full width in a new row */
+        margin-bottom: 10px; /* Add a small margin at the bottom for spacing */
     }
 
-    .weather h2 {
-        font-size: 25px;
+    .search button {
+        max-width: 100%; /* Allow the button to take up the full width on a new row */
     }
 }
